@@ -22,6 +22,10 @@ export default async function handleRequest(
       checkoutDomain: context.env.PUBLIC_CHECKOUT_DOMAIN,
       storeDomain: context.env.PUBLIC_STORE_DOMAIN,
     },
+    connectSrc: [
+      // Your specific ngrok domain
+      'wss://7e17-87-159-128-57.ngrok-free.app:*',
+    ],
   });
 
   const body = await renderToReadableStream(
@@ -32,7 +36,6 @@ export default async function handleRequest(
       nonce,
       signal: request.signal,
       onError(error) {
-        // eslint-disable-next-line no-console
         console.error(error);
         responseStatusCode = 500;
       },
