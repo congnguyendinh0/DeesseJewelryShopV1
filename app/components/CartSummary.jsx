@@ -35,7 +35,7 @@ function CartCheckoutActions({checkoutUrl}) {
       <a
         href={checkoutUrl}
         target="_self"
-        className="block w-full bg-black text-white text-center py-3 px-4 hover:bg-pink-500 transition duration-300 ease-in-out"
+        className="block w-full bg-black text-white text-center py-3 px-4 hover:bg-black-500 transition duration-300 ease-in-out"
       >
         Continue to Checkout →
       </a>
