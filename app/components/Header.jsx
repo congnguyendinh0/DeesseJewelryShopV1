@@ -9,9 +9,9 @@ import {useAside} from '~/components/Aside';
 export function Header({header, isLoggedIn, cart, publicStoreDomain}) {
   const {shop, menu} = header;
   return (
-    <header className="header bg-yellow-50">
+    <header className="header bg-yellow-50 border-b-2 border-b-grey mb-5">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
+        {shop.name}
       </NavLink>
       <HeaderMenu
         menu={menu}
