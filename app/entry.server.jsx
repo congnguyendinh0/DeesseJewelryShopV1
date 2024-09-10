@@ -24,7 +24,7 @@ export default async function handleRequest(
     },
     connectSrc: [
       // Your specific ngrok domain
-      'wss://7e17-87-159-128-57.ngrok-free.app:*',
+      'wss://salmon-informed-cat.ngrok-free.app:*',
     ],
   });
 

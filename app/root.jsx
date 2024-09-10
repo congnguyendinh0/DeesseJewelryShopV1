@@ -148,7 +148,7 @@ export function Layout({children}) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-black text-white">
+      <body className="bg-white">
         {data ? (
           <Analytics.Provider
             cart={data.cart}
