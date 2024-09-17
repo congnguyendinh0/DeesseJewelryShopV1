@@ -18,7 +18,7 @@ import {Form} from '@remix-run/react';
  *      <button type="submit">Search</button>
  *   </>
  *  )}
- *  </SearchForm>
+ *  </SearchForm>xwx
  * @param {SearchFormProps}
  */
 export function SearchForm({children, ...props}) {

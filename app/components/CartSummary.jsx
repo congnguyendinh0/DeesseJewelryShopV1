@@ -9,7 +9,7 @@ export function CartSummary({cart, layout}) {
   return (
     <div aria-labelledby="cart-summary" className={className}>
       <div className="px-6 py-4">
-        <h4 className="text-xl font-light text-gray-800 mb-4">Totals</h4>
+        <h4 className="font-light text-gray-800 mb-4">Totals</h4>
         <dl className="flex justify-between items-center mb-4">
           <dt className="text-gray-600">Subtotal</dt>
           <dd className="text-lg font-light text-gray-800">
