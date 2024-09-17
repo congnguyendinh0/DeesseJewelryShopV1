@@ -52,7 +52,6 @@ export default function Collections() {
 
   return (
     <div className="collections">
-      <h1>Collections</h1>
       <PaginatedResourceSection
         connection={collections}
         resourcesClassName="collections-grid"
@@ -83,15 +82,19 @@ function CollectionItem({collection, index}) {
       to={`/collections/${collection.handle}`}
       prefetch="intent"
     >
-      {collection?.image && (
-        <Image
-          alt={collection.image.altText || collection.title}
-          aspectRatio="1/1"
-          data={collection.image}
-          loading={index < 3 ? 'eager' : undefined}
-        />
-      )}
-      <h5>{collection.title}</h5>
+      <div className="relative backdrop-blur-3xl">
+        {collection?.image && (
+          <Image
+            alt={collection.image.altText || collection.title}
+            aspectRatio="1/1"
+            data={collection.image}
+            loading={index < 3 ? 'eager' : undefined}
+          />
+        )}
+        <h5 className="absolute inset-0 flex items-center justify-center text-center font-extrabold text-white text-3xl">
+          {collection.title}
+        </h5>
+      </div>
     </Link>
   );
 }

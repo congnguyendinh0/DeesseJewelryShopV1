@@ -342,12 +342,14 @@ button.reset:hover:not(:has(> *)) {
   display: block;
   margin-bottom: 2rem;
   position: relative;
+  color:white;
 }
 
 .featured-collection-image {
   aspect-ratio: 1 / 1;
   @media (min-width: 45em) {
     aspect-ratio: 16 / 9;
+    color:white;
   }
 }
 
@@ -355,6 +357,7 @@ button.reset:hover:not(:has(> *)) {
   height: auto;
   max-height: 100%;
   object-fit: cover;
+  color:white;
 }
 
 .recommended-products-grid {
@@ -380,10 +383,12 @@ button.reset:hover:not(:has(> *)) {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width), 1fr));
   margin-bottom: 2rem;
+  color:white;
 }
 
 .collection-item img {
   height: auto;
+  color:white;
 }
 
 /*

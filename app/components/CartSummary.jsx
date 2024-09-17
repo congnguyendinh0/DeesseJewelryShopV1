@@ -2,17 +2,15 @@ import {CartForm, Money} from '@shopify/hydrogen';
 
 export function CartSummary({cart, layout}) {
   const className =
-    layout === 'page'
-      ? 'max-w-md mx-auto bg-white shadow-sm'
-      : 'bg-white shadow-sm';
+    layout === 'page' ? 'bg-white shadow-sm' : 'bg-white shadow-sm';
 
   return (
     <div aria-labelledby="cart-summary" className={className}>
-      <div className="px-6 py-4">
-        <h4 className="font-light text-gray-800 mb-4">Totals</h4>
+      <div className="py-4">
+        <h4 className="">Totals</h4>
         <dl className="flex justify-between items-center mb-4">
-          <dt className="text-gray-600">Subtotal</dt>
-          <dd className="text-lg font-light text-gray-800">
+          <dt className="">Subtotal</dt>
+          <dd className="">
             {cart.cost?.subtotalAmount?.amount ? (
               <Money data={cart.cost?.subtotalAmount} />
             ) : (
@@ -20,6 +18,11 @@ export function CartSummary({cart, layout}) {
             )}
           </dd>
         </dl>
+        <p>
+          {cart.cost?.subtotalAmount?.amount >= 39.9 && (
+            <dd>Free shipping unlocked</dd>
+          )}
+        </p>
         <CartDiscounts discountCodes={cart.discountCodes} />
         <CartCheckoutActions checkoutUrl={cart.checkoutUrl} />
       </div>
