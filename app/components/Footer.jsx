@@ -1,8 +1,7 @@
 import {Suspense} from 'react';
 import {Await, NavLink} from '@remix-run/react';
-import {FaFacebook, FaInstagram, FaTiktok} from 'react-icons/fa'; // Import icons from react-icons
 import logo from 'app/assets/logo.svg';
-
+import IconList from './IconList';
 /**
  * @param {FooterProps}
  */
@@ -12,7 +11,9 @@ export function Footer({footer: footerPromise, header, publicStoreDomain}) {
       <Await resolve={footerPromise}>
         {(footer) => (
           <div className="flex flex-col items-center">
-            <img alt="meow" src={logo} className="w-16 h-16 mb-4" />
+            <div className="flex flex-col items-center">
+              <img alt="meow" src={logo} className="w-16 h-16 mb-4 " />
+            </div>
             <footer className="footer w-full">
               {footer?.menu && header.shop.primaryDomain?.url && (
                 <FooterMenu
@@ -21,32 +22,7 @@ export function Footer({footer: footerPromise, header, publicStoreDomain}) {
                   publicStoreDomain={publicStoreDomain}
                 />
               )}
-              <div className="flex justify-center space-x-4 mt-4">
-                <a
-                  href="https://facebook.com"
-                  className="text-current hover:opacity-75"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook size={24} color="white" />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  className="text-current hover:opacity-75"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram size={24} color="white" />
-                </a>
-                <a
-                  href="https://tiktok.com"
-                  className="text-current hover:opacity-75"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTiktok size={24} color="white" />
-                </a>
-              </div>
+              <IconList></IconList>
             </footer>
           </div>
         )}

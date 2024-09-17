@@ -217,7 +217,6 @@ function SearchResultsPredictiveQueries({queries, inputRef}) {
 
   return (
     <div className="predictive-search-result" key="queries">
-      <h5>Queries</h5>
       <ul>
         {queries.map((suggestion) => {
           if (!suggestion) return null;
@@ -230,9 +229,6 @@ function SearchResultsPredictiveQueries({queries, inputRef}) {
                   if (!inputRef.current) return;
                   inputRef.current.value = suggestion.text;
                   inputRef.current.focus();
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: suggestion?.styledText,
                 }}
               />
             </li>

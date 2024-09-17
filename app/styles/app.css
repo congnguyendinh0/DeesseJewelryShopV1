@@ -4,8 +4,8 @@
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
   --header-height: 64px;
-  --color-dark: #000;
-  --color-light: #fff;
+  --color-dark: #f3ede6; /* Updated to #f3ede6 */
+  --color-light: #f3ede6; /* Updated to #f3ede6 */
 }
 
 img {
@@ -19,6 +19,7 @@ img {
 */
 aside {
   background: var(--color-light);
+  color: #000; /* Set text color to black */
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
   height: 100vh;
   max-width: var(--aside-width);
@@ -31,11 +32,12 @@ aside {
 
 aside header {
   align-items: center;
-  border-bottom: 1px solid var(--color-dark);
+  border-bottom: 1px solid #000; /* Set border color to black */
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
   padding: 0 20px;
+  color: #000; /* Set text color to black */
 }
 
 aside header h3 {
@@ -48,10 +50,12 @@ aside header .close {
   text-decoration: none;
   transition: all 200ms;
   width: 20px;
+  color: #000; /* Set text color to black */
 }
 
 aside header .close:hover {
   opacity: 1;
+  color: #000; /* Ensure hover color is black */
 }
 
 aside header h2 {
@@ -117,6 +121,7 @@ aside li {
   pointer-events: auto;
   visibility: visible;
 }
+
 /* reveal aside */
 .overlay.expanded aside {
   transform: translateX(calc(var(--aside-width) * -1));
@@ -149,7 +154,8 @@ button.reset:hover:not(:has(> *)) {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: var(--color-light);
+  color: #000; /* Set text color to black */
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
@@ -198,6 +204,7 @@ button.reset:hover:not(:has(> *)) {
 */
 .footer {
   background: var(--color-dark);
+  color: #000; /* Set text color to black */
   margin-top: auto;
 }
 
@@ -209,7 +216,11 @@ button.reset:hover:not(:has(> *)) {
 }
 
 .footer-menu a {
-  color: var(--color-light);
+  color: #000 !important; /* Set link color to black */
+}
+
+.footer-menu a:hover {
+  color: #000 !important; /* Ensure hover color is black */
 }
 
 /*
@@ -244,8 +255,9 @@ button.reset:hover:not(:has(> *)) {
 }
 
 .cart-summary-aside {
-  background: white;
-  border-top: 1px solid var(--color-dark);
+  background: var(--color-light);
+  color: #000; /* Set text color to black */
+  border-top: 1px solid #000; /* Set border color to black */
   bottom: 0;
   padding-top: 0.75rem;
   position: absolute;
@@ -266,6 +278,7 @@ button.reset:hover:not(:has(> *)) {
   align-items: center;
   display: flex;
 }
+
 /*
 * --------------------------------------------------
 * components/Search
@@ -278,6 +291,7 @@ button.reset:hover:not(:has(> *)) {
 
 .predictive-search-form {
   background: var(--color-light);
+  color: #000; /* Set text color to black */
   position: sticky;
   top: 0;
 }
@@ -395,6 +409,7 @@ button.reset:hover:not(:has(> *)) {
 .product-item img {
   height: auto;
   width: 100%;
+
 }
 
 /*

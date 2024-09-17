@@ -12,7 +12,7 @@ import {
 export function Header({header, isLoggedIn, cart, publicStoreDomain}) {
   const {shop, menu} = header;
   return (
-    <header className="header bg-yellow-50 border-b-2 border-b-grey mb-5">
+    <header className="header bg-beige border-b-2 border-b-grey mb-5">
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         {shop.name}
       </NavLink>
