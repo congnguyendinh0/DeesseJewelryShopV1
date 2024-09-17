@@ -1,5 +1,6 @@
 import {Suspense} from 'react';
 import {Await, NavLink} from '@remix-run/react';
+import {FaFacebook, FaInstagram, FaTiktok} from 'react-icons/fa'; // Import icons from react-icons
 import logo from 'app/assets/logo.svg';
 
 /**
@@ -22,22 +23,28 @@ export function Footer({footer: footerPromise, header, publicStoreDomain}) {
               )}
               <div className="flex justify-center space-x-4 mt-4">
                 <a
-                  href="https://claude.ai/chat/fcc99b7c-93fb-476f-a2af-ea0d1700bb73"
+                  href="https://facebook.com"
                   className="text-current hover:opacity-75"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <FacebookIcon />
+                  <FaFacebook size={24} color="white" />
                 </a>
                 <a
-                  href="https://claude.ai/chat/fcc99b7c-93fb-476f-a2af-ea0d1700bb73"
+                  href="https://instagram.com"
                   className="text-current hover:opacity-75"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <InstagramIcon />
+                  <FaInstagram size={24} color="white" />
                 </a>
                 <a
-                  href="https://claude.ai/chat/fcc99b7c-93fb-476f-a2af-ea0d1700bb73"
+                  href="https://tiktok.com"
                   className="text-current hover:opacity-75"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <TiktokIcon />
+                  <FaTiktok size={24} color="white" />
                 </a>
               </div>
             </footer>
@@ -151,62 +158,6 @@ function activeLinkStyle({isActive, isPending}) {
     fontWeight: isActive ? 'bold' : undefined,
     color: isPending ? 'grey' : 'white',
   };
-}
-
-function FacebookIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-  );
-}
-
-function TiktokIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 0V5.5A5.5 5.5 0 0 1 14.5 0M16 12h2a4 4 0 0 0 0-8h-8.5"></path>
-    </svg>
-  );
 }
 
 /**
