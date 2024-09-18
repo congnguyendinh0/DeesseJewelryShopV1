@@ -9,7 +9,7 @@
 }
 
 img {
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 /*
@@ -55,7 +55,7 @@ aside header .close {
 
 aside header .close:hover {
   opacity: 1;
-  color: #000; /* Ensure hover color is black */
+  color: #b56a6a; /* Ensure hover color is black */
 }
 
 aside header h2 {
@@ -155,7 +155,7 @@ button.reset:hover:not(:has(> *)) {
 .header {
   align-items: center;
   background: var(--color-light);
-  color: #000; /* Set text color to black */
+
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
@@ -351,6 +351,15 @@ button.reset:hover:not(:has(> *)) {
 
 .recommended-product img {
   height: auto;
+}
+.collectioncover h2,
+.collectioncover button {
+    color: white !important;
+}
+
+.collectioncover button {
+    background-color: white !important;
+    color: black !important; 
 }
 
 /*
