@@ -2,6 +2,7 @@ import {defer} from '@shopify/remix-oxygen';
 import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
+import groq from 'groq';
 
 export const meta = () => {
   return [{title: 'Deesse Jewelry | Home'}];
@@ -15,14 +16,17 @@ export async function loader(args) {
 }
 
 async function loadCriticalData({context}) {
-  const [{collections}, featuredCollection] = await Promise.all([
+  const sanityQuery = groq`*[_type == 'Deesse Jewelry | Home'][0]`;
+  const [{collections}, featuredCollection, sanityData] = await Promise.all([
     context.storefront.query(COLLECTIONS_QUERY),
     context.storefront.query(FEATURED_COLLECTION_QUERY),
+    context.sanity.client.fetch(sanityQuery),
   ]);
 
   return {
     collections: collections.nodes,
     featuredCollection: featuredCollection.collections.nodes[0],
+    sanityData,
   };
 }
 
