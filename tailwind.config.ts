@@ -1,11 +1,12 @@
 import type {Config} from 'tailwindcss';
 
-export default {
+module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
-    colors: {
-      beige: '#f3ede6',
+    extend: {
+      colors: {
+        beige: '#f3ede6',
+      },
     },
   },
   plugins: [],

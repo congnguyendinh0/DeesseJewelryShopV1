@@ -187,26 +187,26 @@ function LatestBlogs({blogs}) {
 }
 
 function CollageFooter({collageFooter}) {
-  if (!collageFooter || !collageFooter.references) return null;
+  if (!collageFooter || !collageFooter.fields) return null;
+
+  const thumbnailField = collageFooter.fields.find(
+    (field) => field.key === 'thumbnail',
+  );
+  if (!thumbnailField || !thumbnailField.reference) return null;
 
   return (
     <div className="collage-footer my-12">
       <h3 className="text-2xl font-semibold mb-6">Collage Footer</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {collageFooter.references.nodes.map((node, index) => (
-          <div
-            key={index}
-            className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg"
-          >
-            {node.__typename === 'MediaImage' && node.image && (
-              <Image
-                data={node.image}
-                className="w-full h-full object-cover"
-                sizes="(min-width: 768px) 25vw, 50vw"
-              />
-            )}
+        {thumbnailField.reference.image && (
+          <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
+            <Image
+              data={thumbnailField.reference.image}
+              className="w-full h-full object-cover"
+              sizes="(min-width: 768px) 25vw, 50vw"
+            />
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
@@ -315,10 +315,7 @@ const COLLAGE_FOOTER_QUERY = `#graphql
       fields {
         key
         value
-      }
-      references(first: 20) {
-        nodes {
-          __typename
+        reference {
           ... on MediaImage {
             id
             image {
