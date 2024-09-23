@@ -37,7 +37,7 @@ const AccordionItem = React.forwardRef(
   ({children, className, ...props}, forwardedRef) => (
     <Accordion.Item
       className={classNames(
-        'focus-within:shadow-mauve12 mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10 focus-within:shadow-[0_0_0_2px]',
+        'mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10',
         className,
       )}
       {...props}
@@ -53,7 +53,7 @@ const AccordionTrigger = React.forwardRef(
     <Accordion.Header className="flex">
       <Accordion.Trigger
         className={classNames(
-          'hover:bg-mauve2 group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none',
+          'hover:bg-mauve2 group flex h-[45px] flex-1 cursor-default items-center justify-between bg-white px-5 text-[15px] leading-none outline-none',
           className,
         )}
         {...props}
