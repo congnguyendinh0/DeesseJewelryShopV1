@@ -13,7 +13,6 @@ import {
 
 import {AppSession} from '~/lib/session';
 import {CART_QUERY_FRAGMENT} from '~/lib/fragments';
-import {createHydrogenContext} from '@shopify/hydrogen';
 import {createSanityLoader} from 'hydrogen-sanity';
 import {createAdminClient} from 'app/lib/adminClient.js';
 

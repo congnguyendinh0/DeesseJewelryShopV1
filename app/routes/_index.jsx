@@ -81,6 +81,7 @@ export default function Homepage() {
       )}
       <RecommendedProducts products={data.recommendedProducts} />
       <LatestBlogs blogs={data.latestBlogs} />
+      <h3 className="text-2xl font-medium my-12">About us</h3>
       <AccordionDemo className="max-w-lg my-12 "></AccordionDemo>
       <CollageFooter collageFooter={data.collageFooter} />
     </div>

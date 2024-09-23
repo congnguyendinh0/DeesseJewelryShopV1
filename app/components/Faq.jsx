@@ -11,23 +11,33 @@ const AccordionDemo = () => (
     collapsible
   >
     <AccordionItem value="item-1">
-      <AccordionTrigger>Is it accessible?</AccordionTrigger>
+      <AccordionTrigger> Modular fine jewelry</AccordionTrigger>
       <AccordionContent>
-        Yes. It adheres to the WAI-ARIA design pattern.
+        With our first release, we’ve built a clever, customizable jewelry line
+        that morphs with you. A necklace becomes a pair of anklets; an earring
+        turns into a ring. Crafted from the finest materials and precious
+        stones, Bijoux’s contemporary fine jewelry can be modified to match your
+        mood, no matter where you are.
       </AccordionContent>
     </AccordionItem>
 
     <AccordionItem value="item-2">
-      <AccordionTrigger>Is it unstyled?</AccordionTrigger>
+      <AccordionTrigger>Our Philosophy</AccordionTrigger>
       <AccordionContent>
-        Yes. Its unstyled by default, giving you freedom over the look and feel.
+        Built on the idea that life is yours for the making, Bijoux is a modular
+        fine jewelry brand that, in its modularity, empowers you to live exactly
+        as you are in a world of limitless possibilities.
       </AccordionContent>
     </AccordionItem>
 
     <AccordionItem value="item-3">
-      <AccordionTrigger>Can it be animated?</AccordionTrigger>
+      <AccordionTrigger>Our values</AccordionTrigger>
       <AccordionContent>
-        Yes! You can animate the Accordion with CSS or JavaScript.
+        The world is our home and we are called to leave it better than we found
+        it. Everything we do, from creating sustainable products to building
+        communities, is based on that principle. When you buy Bijoux jewelry,
+        you’re supporting our artists and helping them make their lives, and the
+        lives of their families, better.
       </AccordionContent>
     </AccordionItem>
   </Accordion.Root>
