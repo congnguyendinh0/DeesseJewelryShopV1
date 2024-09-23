@@ -1,8 +1,7 @@
 import {CartForm, Money} from '@shopify/hydrogen';
 
 export function CartSummary({cart, layout}) {
-  const className =
-    layout === 'page' ? 'bg-white shadow-sm' : 'bg-white shadow-sm';
+  const className = layout === 'page' ? 'bg-beige' : 'bg-beige';
 
   return (
     <div aria-labelledby="cart-summary" className={className}>
