@@ -2,6 +2,7 @@ import {createHydrogenContext} from '@shopify/hydrogen';
 import {AppSession} from '~/lib/session';
 import {CART_QUERY_FRAGMENT} from '~/lib/fragments';
 import {createSanityLoader} from 'hydrogen-sanity';
+import {createAdminClient} from './adminClient';
 
 /**
  * The context implementation is separate from server.ts
@@ -35,6 +36,12 @@ export async function createAppLoadContext(request, env, executionContext) {
       queryFragment: CART_QUERY_FRAGMENT,
     },
   });
+
+  const {admin} = createAdminClient({
+    storeDomain: env.PUBLIC_STORE_DOMAIN,
+    privateAdminToken: env.PRIVATE_STOREFRONT_API_TOKEN,
+    adminApiVersion: '2024-07',
+  });
   const sanity = createSanityLoader({
     cache,
     client: {
@@ -47,6 +54,7 @@ export async function createAppLoadContext(request, env, executionContext) {
 
   return {
     ...hydrogenContext,
+    admin,
     sanity,
     // declare additional Remix loader context
   };
