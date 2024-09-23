@@ -16,7 +16,7 @@ export async function loader(args) {
 }
 
 async function loadCriticalData({context}) {
-  const sanityQuery = groq`*[_type == 'Home'][0]`;
+  const sanityQuery = groq`*[_type == 'Home']`;
 
   // Add a simple Sanity query to test
   const testSanityQuery = groq`*[_type == "testDocument"][0]`;
