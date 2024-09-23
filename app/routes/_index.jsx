@@ -3,6 +3,7 @@ import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
 import groq from 'groq';
+import AccordionDemo from '~/components/Faq';
 
 export const meta = () => {
   return [{title: 'Home'}];
@@ -80,6 +81,7 @@ export default function Homepage() {
       )}
       <RecommendedProducts products={data.recommendedProducts} />
       <LatestBlogs blogs={data.latestBlogs} />
+      <AccordionDemo className="max-w-lg my-12 "></AccordionDemo>
       <CollageFooter collageFooter={data.collageFooter} />
     </div>
   );
