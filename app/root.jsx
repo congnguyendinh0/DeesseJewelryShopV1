@@ -10,7 +10,6 @@ import {
   ScrollRestoration,
   isRouteErrorResponse,
 } from '@remix-run/react';
-import favicon from 'public/images/favicon.ico?';
 import resetStyles from '~/styles/reset.css?url';
 import appStyles from '~/styles/app.css?url';
 import tailwindStyles from '~/styles/tailwind.css?url';
@@ -51,7 +50,7 @@ export function links() {
       href: 'https://shop.app',
     },
 
-    {rel: 'icon', type: 'image/x-icon', href: favicon},
+    {rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico'},
   ];
 }
 
@@ -147,7 +146,7 @@ export function Layout({children}) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="icon" href="favicon.ico" type="assets/x-icon"></link>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
         <Meta />
         <Links />
       </head>
