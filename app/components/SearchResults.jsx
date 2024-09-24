@@ -32,7 +32,7 @@ function SearchResultsArticles({term, articles}) {
       <div>
         {articles?.nodes?.map((article) => {
           const articleUrl = urlWithTrackingParams({
-            baseUrl: `/blogs/${article.handle}`,
+            baseUrl: `/blogs/news/${article.handle}`,
             trackingParams: article.trackingParameters,
             term,
           });

@@ -76,9 +76,14 @@ function SearchAside() {
                 placeholder="Search"
                 ref={inputRef}
                 type="search"
+                className="flex-grow border border-gray-300 px-4 py-2 focus:outline-none focus:border-black"
               />
-              &nbsp;
-              <button onClick={goToSearch}>Search</button>
+              <button
+                className="bg-black text-white px-4 py-2 hover:bg-black transition duration-300 ease-in-out"
+                onClick={goToSearch}
+              >
+                →
+              </button>
             </>
           )}
         </SearchFormPredictive>

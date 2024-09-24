@@ -42,8 +42,6 @@ export async function action({request, context}) {
     if (!addressId) {
       throw new Error('You must provide an address id.');
     }
-
-    // this will ensure redirecting to login never happen for mutatation
     const isLoggedIn = await customerAccount.isLoggedIn();
     if (!isLoggedIn) {
       return json(
@@ -80,7 +78,6 @@ export async function action({request, context}) {
 
     switch (request.method) {
       case 'POST': {
-        // handle new address creation
         try {
           const {data, errors} = await customerAccount.mutate(
             CREATE_ADDRESS_MUTATION,
@@ -125,7 +122,6 @@ export async function action({request, context}) {
       }
 
       case 'PUT': {
-        // handle address updates
         try {
           const {data, errors} = await customerAccount.mutate(
             UPDATE_ADDRESS_MUTATION,
@@ -174,7 +170,6 @@ export async function action({request, context}) {
       }
 
       case 'DELETE': {
-        // handles address deletion
         try {
           const {data, errors} = await customerAccount.mutate(
             DELETE_ADDRESS_MUTATION,

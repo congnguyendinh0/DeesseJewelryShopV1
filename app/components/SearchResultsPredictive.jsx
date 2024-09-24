@@ -63,7 +63,7 @@ function SearchResultsPredictiveArticles({term, articles, closeSearch}) {
       <ul>
         {articles.map((article) => {
           const articleUrl = urlWithTrackingParams({
-            baseUrl: `/blogs/${article.blog.handle}/${article.handle}`,
+            baseUrl: `/blogs/news/${article.blog.handle}/${article.handle}`,
             trackingParams: article.trackingParameters,
             term: term.current ?? '',
           });
