@@ -7,7 +7,8 @@ Here’s a structured and comprehensive README for your Shopify development stor
 This project is a development store created for  to test and potentially sell jewelry, built using Shopify and Hydrogen. It is based on the Hydrogen quickstart starter.
 
 #Demo
-[Demo](readme.com)
+![Preview of store](public/images/screen.png)
+[Demo](https://youtu.be/EtP8sIiCNoo)
 
 ## Table of Contents
 - [Features for Shoppers](#features-for-shoppers)
