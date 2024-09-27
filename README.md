@@ -8,6 +8,7 @@ This project is a development store created for  to test and potentially sell je
 
 #Demo
 ![Preview of store](public/images/screen.png)
+#Video
 [Demo](https://youtu.be/EtP8sIiCNoo)
 
 ## Table of Contents
