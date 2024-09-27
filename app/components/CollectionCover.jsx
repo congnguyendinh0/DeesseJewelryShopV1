@@ -1,4 +1,6 @@
-import React from 'react';
+import {Link} from '@remix-run/react';
+import {Image} from '@shopify/hydrogen-react';
+
 function CollectionCover({collection}) {
   if (!collection || !collection.image) return null;
 

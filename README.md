@@ -10,10 +10,10 @@
 npm create @shopify/hydrogen@latest
 ```
 
-## Building for production
+## running
 
 ```bash
-npm run build
+set up the environment variables
 ```
 
 ## Local development
